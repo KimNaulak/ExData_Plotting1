@@ -1,6 +1,0 @@
-fileName <- file("exdata_data_household_power_consumption.txt") 
-data$Date <- as.Date(data$Date, format = "%d/%m/%Y") 
-DateTime <- paste(as.Date(data$Date), data$Time) 
-data$DateTime <- as.POSIXct(DateTime)
-png(file = "Plot2.png", width = 480, height = 480, units = "px")
-plot(data$Global_active_power ~ data$DateTime, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
